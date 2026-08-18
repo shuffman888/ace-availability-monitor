@@ -4,6 +4,9 @@ import { mkdir, readFile, writeFile } from "node:fs/promises";
 const url = "https://trade.cbp.dhs.gov/ace/dashboard/public/";
 const stateFile = "state/system-availability-messages.txt";
 const outputFile = process.env.GITHUB_OUTPUT;
+const commitMessageFile = process.env.RUNNER_TEMP
+  ? `${process.env.RUNNER_TEMP}/ace-commit-message.txt`
+  : null;
 
 function normalize(text) {
   return text
@@ -76,10 +79,22 @@ try {
 
   if (previous === null) {
     await writeFile(stateFile, `${current}\n`);
+    if (commitMessageFile) {
+      await writeFile(
+        commitMessageFile,
+        `Initialize ACE availability snapshot\n\nCurrent value:\n${current}\n`,
+      );
+    }
     await setOutput("changed", "baseline");
     console.log("Initial System Availability Messages baseline captured.");
   } else if (previous !== current) {
     await writeFile(stateFile, `${current}\n`);
+    if (commitMessageFile) {
+      await writeFile(
+        commitMessageFile,
+        `ACE System Availability Messages changed\n\nCurrent value:\n${current}\n`,
+      );
+    }
     await setOutput("changed", "true");
     console.log("System Availability Messages changed.");
   } else {

@@ -54,14 +54,10 @@ jobs:
           git config user.name "ACE Availability Monitor"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
 
-          if [ "${{ steps.monitor.outputs.changed }}" = "true" ]; then
-            message="ACE System Availability Messages changed"
-          elif [ "${{ steps.monitor.outputs.changed }}" = "baseline" ]; then
-            message="Initialize ACE availability snapshot"
+          if [ "${{ steps.monitor.outputs.changed }}" = "true" ] || [ "${{ steps.monitor.outputs.changed }}" = "baseline" ]; then
+            git commit -F "$RUNNER_TEMP/ace-commit-message.txt"
           else
-            message="Maintain ACE monitor activity"
+            git commit -m "Maintain ACE monitor activity"
           fi
-
-          git commit -m "$message"
           git pull --rebase
           git push
