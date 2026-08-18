@@ -92,7 +92,7 @@ try {
     if (commitMessageFile) {
       await writeFile(
         commitMessageFile,
-        `ACE System Availability Messages changed\n\nCurrent value:\n${current}\n`,
+        `ACE System Availability Messages changed\n\nCBP is currently experiencing a service outage; please review the System Availability Messages below for details and updates.\n\nCurrent value:\n${current}\n`,
       );
     }
     await setOutput("changed", "true");
