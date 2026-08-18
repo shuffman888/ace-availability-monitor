@@ -1,0 +1,67 @@
+name: Monitor ACE availability messages
+
+on:
+  schedule:
+    - cron: "*/5 * * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: ace-availability-monitor
+  cancel-in-progress: true
+
+jobs:
+  monitor:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+
+      - name: Install dependencies
+        run: npm install --no-audit --no-fund
+
+      - name: Install Chromium
+        run: npx playwright install --with-deps chromium
+
+      - name: Check System Availability Messages
+        id: monitor
+        run: npm run monitor
+
+      - name: Maintain monthly activity marker
+        shell: bash
+        run: |
+          if [ "$(date -u +%d)" = "01" ]; then
+            date -u +%Y-%m > state/activity-month.txt
+          fi
+
+      - name: Save changed snapshot
+        shell: bash
+        run: |
+          git add state/
+          if git diff --cached --quiet; then
+            exit 0
+          fi
+
+          git config user.name "ACE Availability Monitor"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+
+          if [ "${{ steps.monitor.outputs.changed }}" = "true" ]; then
+            message="ACE System Availability Messages changed"
+          elif [ "${{ steps.monitor.outputs.changed }}" = "baseline" ]; then
+            message="Initialize ACE availability snapshot"
+          else
+            message="Maintain ACE monitor activity"
+          fi
+
+          git commit -m "$message"
+          git pull --rebase
+          git push
