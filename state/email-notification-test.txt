@@ -1,0 +1,2 @@
+Controlled GitHub email-notification test.
+This file is not used for change detection.
