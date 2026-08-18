@@ -1,0 +1,2 @@
+Controlled outage-wording email test.
+This file is not used for change detection.
