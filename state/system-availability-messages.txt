@@ -1,2 +1,7 @@
 System Availability Messages
-ACE Applications scheduled maintenance in progress.
+Cargo Manifest Query (EDI) is degraded
+CQ Query messages are delayed by 1 hours and 58 minutes
+Entry Summary (EDI) is degraded
+Entry Summary messages are delayed by 1 hours and 59 minutes
+ITDS PGA (EDI) is degraded
+PGA Data messages are delayed by 2 hours
