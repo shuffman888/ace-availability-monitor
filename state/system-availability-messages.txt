@@ -1,3 +1,2 @@
 System Availability Messages
-Entry Summary (EDI) is degraded
-Entry Summary messages are delayed by 3 minutes
+ACE applications are operating normally.
