@@ -1,2 +1,2 @@
 System Availability Messages
-ACE applications are operating normally.
+Entry Summary (EDI) is degraded
