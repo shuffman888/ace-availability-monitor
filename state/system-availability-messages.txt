@@ -1,6 +1,2 @@
 System Availability Messages
-Entry Summary (EDI) is degraded
-Entry Summary messages are delayed by 33 minutes
-ITDS PGA (EDI) is degraded
-PGA Data messages are delayed by 33 minutes
-Trade facing queue for both type 86 and others messages are delayed by 33 minutes
+ACE applications are operating normally.
