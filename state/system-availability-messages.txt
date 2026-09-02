@@ -1,3 +1,4 @@
 System Availability Messages
 ITDS PGA (EDI) is degraded
-PGA Data messages are delayed by 1 hours and 41 minutes
+PGA Data messages are delayed by 1 hours and 55 minutes
+Trade facing queue for both type 86 and others messages are delayed by 14 minutes
