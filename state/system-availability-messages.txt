@@ -1,3 +1,2 @@
 System Availability Messages
-ITDS PGA (EDI) is degraded
-PGA Data messages are delayed by 6 hours
+ACE applications are operating normally.
