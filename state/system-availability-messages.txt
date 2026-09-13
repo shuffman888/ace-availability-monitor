@@ -1,2 +1,6 @@
 System Availability Messages
-ACE Applications scheduled maintenance in progress.
+Cargo Manifest Query (EDI) is degraded
+CQ Query messages are delayed by 2 hours and 53 minutes
+Entry Summary (EDI) is degraded
+Entry Summary messages are delayed by 2 hours and 38 minutes
+Reference Table Queries (EDI) is degraded
