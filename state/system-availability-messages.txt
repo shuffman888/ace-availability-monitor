@@ -1,5 +1,5 @@
 System Availability Messages
 Air Manifest (EDI) is degraded
-Outbound notification messages are delayed by 16 minutes
+Outbound notification messages are delayed by 19 minutes
 In-bond (QP/WP/NS) is degraded
-Outbound notification messages are delayed by 16 minutes
+Outbound notification messages are delayed by 19 minutes
