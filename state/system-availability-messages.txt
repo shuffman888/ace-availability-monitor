@@ -1,4 +1,2 @@
 System Availability Messages
-Entry Summary (EDI) is degraded
-Entry Summary messages are delayed by 25 minutes
-Truck Manifest Trade Portal is unavailable
+ACE applications are operating normally.
