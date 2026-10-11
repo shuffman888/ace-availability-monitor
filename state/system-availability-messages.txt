@@ -1,2 +1,2 @@
 System Availability Messages
-ACE Applications scheduled maintenance in progress.
+ACE applications are operating normally.
