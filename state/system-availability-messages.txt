@@ -1,2 +1,9 @@
 System Availability Messages
-ACE applications are operating normally.
+ACE Reports is degraded
+Air Manifest (EDI) is degraded
+Outbound notification messages are delayed by 23 minutes
+eBond (EDI) is degraded
+In-bond (QP/WP/NS) is degraded
+Outbound notification messages are delayed by 23 minutes
+Ocean & Rail Manifest (EDI) is degraded
+Outbound notification messages are delayed by 23 minutes
