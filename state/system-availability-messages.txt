@@ -1,2 +1,3 @@
 System Availability Messages
-ACE Applications scheduled maintenance in progress.
+ACE Reports is degraded
+Cargo Release (EDI) is degraded
