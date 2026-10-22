@@ -1,2 +1,2 @@
 System Availability Messages
-Cargo Release (EDI) is degraded
+ACE applications are operating normally.
