@@ -1,2 +1,2 @@
 System Availability Messages
-eBond (EDI) is degraded
+ACE applications are operating normally.
