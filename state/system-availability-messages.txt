@@ -1,2 +1,4 @@
 System Availability Messages
-ACE applications are operating normally.
+Cargo Systems Messaging Service
+Please refresh the page for the latest CSMS messages.
+Visit the CSMS site to register for updates
