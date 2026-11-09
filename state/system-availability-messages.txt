@@ -1,2 +1,9 @@
 System Availability Messages
-ACE Reports is degraded
+Entry Summary (EDI) is degraded
+Entry Summary messages are delayed by 1 hours and 1 minutes
+ITDS PGA (EDI) is degraded
+PGA Data messages are delayed by 54 minutes
+Liquidation Bulletin Notice is degraded
+Ocean Manifest (EDI) is degraded
+Outbound notification messages are delayed by 52 minutes
+Rail Manifest (EDI) is degraded
