@@ -1,2 +1,5 @@
 System Availability Messages
-ACE applications are operating normally.
+Entry Summary (EDI) is degraded
+Entry Summary messages are delayed by 1 hours and 9 minutes
+Liquidation Bulletin Notice is degraded
+Rail Manifest (EDI) is degraded
